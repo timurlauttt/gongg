@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Selis Molis Hoki</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    @extends('layouts.navbar')
+    @extends('layouts.footer')
+
+    <!-- About Us Section -->
+    <section class="pt-32 pb-16"> <!-- Menambahkan padding top (pt-32) untuk memberikan lebih banyak ruang -->
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900">Siapa Kami?</h2>
+            <p class="text-xl text-black mb-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit vitae repellat deserunt iste, doloribus esse unde possimus aliquam ut! Esse.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Misi Kami -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-black">Misi Kami</h3>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptates dolore nesciunt. Ab, culpa? Fuga voluptatibus officiis totam earum. Aperiam soluta quibusdam minima consequatur. Quaerat minima eaque est unde deleniti!</p>
+                </div>
+
+                <!-- Visi Kami -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-black">Visi Kami</h3>
+                    <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quasi vero culpa, quaerat quod voluptate modi corporis dolorum odio doloribus aut provident sapiente! Expedita, voluptates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Tim Kami</h2>
+            <p class="text-xl mb-8">Kami memiliki tim teknisi berpengalaman yang siap memberikan layanan terbaik.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Anggota Tim 1 -->
+                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                    <img src="images/team1.jpg" alt="Anggota Tim 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Ahmad Hidayat</h3>
+                    <p class="text-gray-600">Teknisi Senior</p>
+                </div>
+
+                <!-- Anggota Tim 2 -->
+                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                    <img src="images/team2.jpg" alt="Anggota Tim 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Siti Rahmawati</h3>
+                    <p class="text-gray-600">Teknisi dan Konsultan</p>
+                </div>
+
+                <!-- Anggota Tim 3 -->
+                <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+                    <img src="images/team3.jpg" alt="Anggota Tim 3" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Budi Santoso</h3>
+                    <p class="text-gray-600">Spesialis Kelistrikan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
