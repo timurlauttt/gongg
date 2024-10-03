@@ -9,9 +9,7 @@
 </head>
 
 <body class="bg-gray-100">
-    @extends('layouts.navbar')
-    @extends('layouts.footer')
-
+    @include('layouts.navbar')
     <!-- About Us Section -->
     <section class="pt-32 pb-16"> <!-- Menambahkan padding top (pt-32) untuk memberikan lebih banyak ruang -->
         <div class="container mx-auto text-center">
@@ -63,7 +61,7 @@
             </div>
         </div>
     </section>
-
+    @include('layouts.footer')
 </body>
 
 </html>

@@ -1,5 +1,6 @@
-<footer class="bg-gray-900 text-white py-6 border-t border-white">
+<footer style="background-color:#D97706" class="text-white py-6">
     <div class="container mx-auto text-center">
         <p>&copy; Selis Molis Hoki. All rights reserved.</p>
     </div>
 </footer>
+    

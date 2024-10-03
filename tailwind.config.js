@@ -1,26 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
-  ],
+module.exports = {
   theme: {
-    extend: {
-      colors: {
-        brown: {
-          50: '#faf3e0',
-          100: '#f5e0b7',
-          200: '#f0d09d',
-          300: '#eab77d',
-          400: '#e09b4c',
-          500: '#d07f1f',
-          600: '#b7691a',
-          700: '#945014',
-          800: '#6d380f',
-          900: '#4d270a',
-        },
-      },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'white': '#ffffff',
+      'purple': '#3f3cbb',
+      'midnight': '#121063',
+      'metal': '#565584',
+      'tahiti': '#3ab7bf',
+      'silver': '#ecebff',
+      'bubble-gum': '#ff77e9',
+      'bermuda': '#78dcca',
+      'slate' : '#334155',
     },
   },
   plugins: [

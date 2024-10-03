@@ -9,9 +9,7 @@
 </head>
 
 <body class="bg-gray-100">
-    @extends('layouts.navbar')
-    @extends('layouts.footer')
-
+    @include('layouts.navbar')
     <!-- Contact Us Section -->
     <section class="pt-32 pb-16 bg-white text-black">
         <div class="container mx-auto px-4 md:px-0">
@@ -76,6 +74,7 @@
             </div>
         </div>
     </section>
+    @include('layouts.footer')
 </body>
 
 </html>

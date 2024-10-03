@@ -1,0 +1,76 @@
+.carousel-item {
+    opacity: 0; /* Awalnya semua slide tidak terlihat */
+    visibility: hidden; /* Tidak terlihat */
+    z-index: 0; /* Semua slide berada di lapisan bawah */
+    transition: opacity 0.7s, visibility 0.7s, z-index 0s 0.7s;
+}
+
+.carousel-item.active {
+    opacity: 1; /* Slide aktif terlihat */
+    visibility: visible; /* Terlihat */
+    z-index: 1; /* Slide aktif berada di lapisan atas */
+    transition: opacity 0.7s, visibility 0.7s, z-index 0s 0s;
+}
+
+.slide-button {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.slide-button:hover {
+    background-color: #D97706; /* #D97706 adalah kode warna hover untuk bg-yellow-600 */
+    transform: scale(1.05);
+}
+
+/* Mengatur posisi dan tampilan tombol navigasi */
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem; /* Ukuran font lebih besar */
+    color: white; /* Warna teks putih */
+    padding: 10px; /* Ruang di sekitar teks */
+    cursor: pointer; /* Tanda kursor klik */
+    z-index: 20; /* Z-index tinggi agar berada di depan */
+}
+
+#prev {
+    left: 16px; /* Jarak dari tepi kiri */
+}
+
+#next {
+    right: 16px; /* Jarak dari tepi kanan */
+}
+
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang saat hover */
+    border-radius: 50%;
+}
+
+
+
+/* testimoni */
+
+    @media (min-width: 1024px) {
+        /* Atur tinggi minimum dan maksimum untuk card testimonial */
+        .swiper-slide {
+            min-height: 250px; /* Tinggi minimum card */
+            max-height: 350px; /* Tinggi maksimum card */
+            display: flex;
+            flex-direction: column; /* Mengatur tata letak konten secara vertikal */
+            justify-content: center; /* Pusatkan konten secara vertikal */
+            align-items: center; /* Pusatkan konten secara horizontal */
+            text-align: center; /* Pusatkan teks */
+        }
+    }
+
+    /* Tambahkan aturan untuk layar yang lebih kecil jika diperlukan */
+    .swiper-slide {
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
