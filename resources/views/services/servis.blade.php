@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servis Sepeda Listrik</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="bg-gray-100">
@@ -98,6 +99,17 @@
             </div>
         </div>
     </section>
+        <!-- Modal for Confirmation -->
+        <div id="modal" class="modal flex">
+            <div class="modal-content">
+                <h3 class="text-lg font-semibold text-gray-800">Nomor Resi Anda</h3>
+                <p class="mt-2 text-gray-600">Nomor Resi Anda: <span id="tracking-number">123456789</span></p>
+                <p class="text-gray-600">Gunakan nomor ini untuk mengecek status perbaikan unit Anda.</p>
+                <button id="close-modal" class="close mt-4">Tutup</button>
+            </div>
+        </div>
+    
     @include('layouts.footer')
+    <script src="js/popover.js"></script>
 </body>
 </html>
