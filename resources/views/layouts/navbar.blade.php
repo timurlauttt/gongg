@@ -10,20 +10,22 @@
         </button>
 
         <!-- Logo and Title -->
-        <a href="{{ route('home') }}" class="hover:text-gray-400 text-white text-2xl font-bold flex items-center md:ml-0 ml-auto order-2 md:order-none">
+        <a href="{{ route('home') }}" id="logo-container" class="hover:text-gray-900 text-white text-2xl font-bold flex items-center md:ml-0 ml-auto order-2 md:order-none">
             Selis Molis Hoki
-            <div class="ml-1 bg-white p-0 rounded-full border-2 border-black">
-                <img src="images/logofix.png" alt="Logo Perusahaan" class="h-6 md:h-8 lg:h-10 w-auto">
+            <div class="ml-1 p-1 rounded-full border-1 border-black flex items-center justify-center">
+                <img src="images/logofix1.jpg" alt="Logo Perusahaan" class="h-10 md:h-10 lg:h-12 w-auto rounded-full">
             </div>
         </a>
 
+        
         <!-- Desktop and mobile menu -->
-        <ul id="menu" class="hidden flex-col md:flex md:flex-row md:space-x-6 text-white mt-4 md:mt-0 md:items-center transition-all duration-300 ease-in-out absolute top-16 left-0 w-full md:static md:w-auto md:top-0 md:left-0 md:order-none order-3 bg-orange-500 md:bg-transparent">
-            <li class="w-full md:w-auto"><a href="home" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Home</a></li>
-            <li class="w-full md:w-auto"><a href="#services" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Services</a></li>
-            <li class="w-full md:w-auto"><a href="#about-us" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">About Us</a></li>
-            <li class="w-full md:w-auto"><a href="#testimoni" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Testimonials</a></li>
-            <li class="w-full md:w-auto"><a href="#contact" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Contact</a></li>
+        <ul id="menu" class="hidden flex-col md:flex md:flex-row md:space-x-6 text-white mt-4 md:mt-0 md:items-center transition-all duration-300 ease-in-out relative top-full left-0 w-full md:static md:w-auto bg-orange-500 md:bg-transparent">
+            <li class="w-full md:w-auto"><a href="home" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Beranda</a></li>
+            <li class="w-full md:w-auto"><a href="#services" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Servis</a></li>
+            <li class="w-full md:w-auto"><a href="#cek-status" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Cek Status</a></li>
+            <li class="w-full md:w-auto"><a href="#about-us" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Tentang Kami</a></li>
+            <li class="w-full md:w-auto"><a href="#testimoni" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Testimoni</a></li>
+            <li class="w-full md:w-auto"><a href="#contact" class="block py-2 px-4 bg-orange-500 hover:bg-yellow-700 rounded transition-colors duration-300 ease-in-out text-center">Kontak</a></li>
         </ul>
     </div>
 </nav>
@@ -36,21 +38,24 @@
     const line1 = document.getElementById('line1');
     const line2 = document.getElementById('line2');
     const line3 = document.getElementById('line3');
+    const logoContainer = document.getElementById('logo-container'); // Reference to the logo container
 
     menuBtn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
+        menu.classList.toggle('block');
 
         // Toggle the icon appearance
         if (menu.classList.contains('hidden')) {
-            // Menu is closed: Set lines to horizontal
             line1.setAttribute('d', 'M4 6h16');
             line2.setAttribute('d', 'M4 12h16');
             line3.setAttribute('d', 'M4 18h16');
+            line3.classList.remove('hidden');
+            logoContainer.classList.remove('hidden'); // Show logo when menu is hidden
         } else {
-            // Menu is open: Transform lines to vertical
-            line1.setAttribute('d', 'M6 4L18 20'); // First line to diagonal
-            line2.setAttribute('d', 'M6 20L18 4'); // Second line to diagonal
-            line3.setAttribute('class', 'hidden'); // Hide third line
+            line1.setAttribute('d', 'M6 4L18 20');
+            line2.setAttribute('d', 'M6 20L18 4');
+            line3.classList.add('hidden');
+            logoContainer.classList.add('hidden'); // Hide logo when menu is opened
         }
     });
 
@@ -63,4 +68,5 @@
             targetElement.scrollIntoView({ behavior: 'smooth' });
         }
     });
+
 </script>

@@ -10,8 +10,16 @@
 
 <body class="bg-gray-100">
     @include('layouts.navbar')
+
+
+    <div class="text-left py-8 ml-8">
+        <button onclick="window.history.back()" class="bg-white-500 text-black px-6 py-2 rounded-lg shadow-md hover:bg-yellow-100 transition duration-300 mt-24">
+            <- Kembali
+        </button>
+    </div>
+
     <!-- About Us Section -->
-    <section class="pt-32 pb-16"> <!-- Menambahkan padding top (pt-32) untuk memberikan lebih banyak ruang -->
+    <section class="pt-4 pb-16"> <!-- Menambahkan padding top (pt-32) untuk memberikan lebih banyak ruang -->
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8 text-gray-900">Siapa Kami?</h2>
             <p class="text-xl text-black mb-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit vitae repellat deserunt iste, doloribus esse unde possimus aliquam ut! Esse.</p>
@@ -33,7 +41,7 @@
     </section>
 
     <!-- Our Team Section -->
-    <section class="bg-gray-800 text-white py-16">
+    <section style="background-color: white" class="text-black py-16">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8">Tim Kami</h2>
             <p class="text-xl mb-8">Kami memiliki tim teknisi berpengalaman yang siap memberikan layanan terbaik.</p>

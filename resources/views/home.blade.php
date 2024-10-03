@@ -13,7 +13,7 @@
     <body class="bg-gray-100">
         @include('layouts.navbar')
         <!-- Header/Hero Section -->
-        <header class="relative w-full h-screen pt-18">
+        <header class="relative w-full h-screen pt-20" style="z-index: 0;">
             <div id="carouselExample" class="relative w-full h-screen overflow-hidden">
                 <!-- Slide 1 -->
                 <div class="carousel-item absolute inset-0 bg-cover bg-center transition-all duration-700" style="background-image: url('images/mypict.jpg');">
@@ -44,7 +44,7 @@
                             <h1 class="text-5xl font-bold mb-4">Selis Molis Hoki</h1>
                             <h1 class="text-3xl font-bold mb-4">Cek Status Perbaikan Anda</h1>
                             <p class="text-xl mb-8">Ingin tahu status perbaikan kendaraan anda? kliki tombol di bawah ini</p>
-                            <a href="#services" class="slide-button bg-yellow-500 drop-shadow-2xl text-white px-6 py-3 rounded-full text-lg hover:bg-yellow-600">Cek Status</a>
+                            <a href="#cek-status" class="slide-button bg-yellow-500 drop-shadow-2xl text-white px-6 py-3 rounded-full text-lg hover:bg-yellow-600 ">Cek Status</a>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,46 @@
                 </div>
             </div>
         </section>
-        
+         
+        {{-- cek status --}}
+        <section id="cek-status" style="background-color: white" class="py-24 px-6">
+            <div class="container mx-auto text-center">
+                <!-- Judul Section -->
+                <h2 class="text-4xl font-bold mb-8 text-gray-900">Cek Status Perbaikan</h2>
+
+                <!-- Paragraph Section -->
+                <p class="text-xl text-gray-700 mb-10">Masukkan token perbaikan Anda untuk melihat status terkini dari unit yang sedang diperbaiki.</p>
+
+                <!-- Form untuk Mengecek Status -->
+                <form id="status-form" class="w-full max-w-lg mx-auto">
+                    <div class="flex flex-col md:flex-row items-center justify-center mb-8">
+                        <input 
+                            type="text" 
+                            name="token" 
+                            id="token" 
+                            placeholder="Masukkan Token Perbaikan" 
+                            class="w-full px-5 py-4 text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 mb-4 md:mb-0 md:mr-4"
+                            required>
+                        <button 
+                            type="submit" 
+                            class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none transition duration-300">
+                            Cek Status
+                        </button>
+                    </div>
+                </form>
+                <!-- Div untuk menampilkan hasil pengecekan status -->
+                <div id="status-result" class="w-full max-w-lg mx-auto mt-8 p-4 bg-white rounded-lg shadow-md hidden">
+                    <!-- The status will be dynamically inserted here -->
+                </div>
+                <script src="js/check.js"></script>
+
+                <!-- Placeholder Hasil Cek -->
+                <div id="status-hasil" class="text-xl text-gray-800 mt-12">
+                    <!-- Hasil status akan ditampilkan di sini -->
+                </div>
+            </div>
+        </section>
+
         <!-- About Us Section -->
         <section id="about-us" style="background-color: #F3F4F6" class="py-12 bg-gray-100 text-gray-900">
             <div class="container mx-auto text-center">
@@ -129,7 +168,7 @@
                 class="inline-block text-white px-5 py-3 min-w-[200px] rounded-full text-lg transition-colors duration-300 text-center"
                 onmouseover="this.style.backgroundColor='#eab308'"
                 onmouseout="this.style.backgroundColor='#d97706'">
-                Reservasi sekarang
+                Selengkapnya
                 </a>
             </div>
         </section>
@@ -219,6 +258,7 @@
                 </div>
             </div>
         </section>
+        
         @include('layouts.footer')
     </body>
 </html>

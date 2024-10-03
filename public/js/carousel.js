@@ -25,7 +25,7 @@ function startCarousel() {
     setInterval(() => {
         currentIndex = (currentIndex + 1) % items.length;
         showSlide(currentIndex);
-    }, 5000); // Ganti angka 5000 dengan interval waktu (ms) yang diinginkan
+    }, 9000); // Ganti angka 5000 dengan interval waktu (ms) yang diinginkan
 }
 
 // Inisialisasi slide pertama
@@ -33,3 +33,5 @@ showSlide(currentIndex);
 
 // Mulai otomatis carousel
 startCarousel();
+
+
